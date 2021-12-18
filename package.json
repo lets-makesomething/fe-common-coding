@@ -1,0 +1,30 @@
+{
+  "name": "fe-common-coding",
+  "version": "1.0.0",
+  "description": "to exercise your coding skills",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lets-makesomething/fe-common-coding.git"
+  },
+  "keywords": [
+    "coding",
+    "skill"
+  ],
+  "author": "pearyman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lets-makesomething/fe-common-coding/issues"
+  },
+  "homepage": "https://github.com/lets-makesomething/fe-common-coding#readme",
+  "devDependencies": {
+    "@babel/core": "^7.16.5",
+    "@babel/preset-env": "^7.16.5",
+    "babel-jest": "^27.4.5",
+    "jest": "^27.4.5",
+    "ts-babel": "^6.1.7"
+  }
+}

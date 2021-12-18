@@ -18,10 +18,7 @@ jobs:
           npm run test
       - name: Jest Reporter
         uses: tanmen/jest-reporter@v1.5
+        run: jest --json --outputFile=result.json --testLocationInResults
         with:
           # Github Token
           github-token: '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'
-          # jest result file path for json
-          result-file: # optional, default is result.json
-          # Display name. Make sure this name is unique within the workflow.
-          action-name: # optional, default is Jest Test Results

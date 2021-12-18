@@ -20,7 +20,7 @@ jobs:
         uses: tanmen/jest-reporter@v1.5
         with:
           # Github Token
-          github-token:
+          github-token: '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'
           # jest result file path for json
           result-file: # optional, default is result.json
           # Display name. Make sure this name is unique within the workflow.

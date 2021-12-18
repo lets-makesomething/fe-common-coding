@@ -16,8 +16,8 @@ jobs:
         run: |
           npm i
           npm run test
-      - name: Jest Reporter
-        run: jest --json --outputFile=result.json --testLocationInResults
+      - run: jest --json --outputFile=result.json --testLocationInResults
+      - uses: tanmen/jest-reporter@v1.5
+        if: always()
         with:
-          # Github Token
           github-token: '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'

@@ -29,8 +29,6 @@
     "ts-babel": "^6.1.7"
   },
   "husky":{
-    "hooks":{
-      "pre-commit":"npm run test"
-    }
+
   }
 }

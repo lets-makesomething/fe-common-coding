@@ -4,4 +4,6 @@
  * output: getUrlParams('a') => return 1
  */
 
- function getUrlParams() {}
+ function getUrlParams() {
+   console.log('test')
+ }

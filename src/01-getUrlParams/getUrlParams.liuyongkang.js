@@ -22,7 +22,7 @@ function getUrlParams1(url, name) {
 	}, '');
 	return val;
 }
-// 实例
+// 测试例子
 var url = 'https://baidu.com?a=1&b=2&c=3'; // 带?和&的url
 var url1 = 'https://baidu.com?a=1'; // 只带?的url
 console.log(getUrlParams1(url, 'a')); // 1
@@ -41,7 +41,7 @@ function getUrlParams2(url, name) {
 	return '';
 }
 
-// 实例
+// 测试例子
 var url = 'https://baidu.com?a=1&b=2&c=3'; // 带?和&的url
 var url1 = 'https://baidu.com?a=1'; // 只带?的url
 console.log(getUrlParams2(url, 'a')); // 1

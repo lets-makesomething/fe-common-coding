@@ -28,7 +28,8 @@
     "jest": "^27.4.5",
     "ts-babel": "^6.1.7"
   },
-  "husky":{
-
+  "husky": {},
+  "dependencies": {
+    "jest-environment-jsdom": "^27.4.6"
   }
 }

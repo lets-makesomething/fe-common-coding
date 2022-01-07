@@ -1,4 +1,4 @@
-import getUrlParams from '../src/01-getUrlParams/getUrlParams-chenai';
+import getUrlParams from '../src/01-getUrlParams/01-getUrlParams-chenai';
 test('getUrlParams-01', () => {
   expect(getUrlParams('https://baidu.com?a=1&b=2&c=3', 'a')).toBe('1');
 });

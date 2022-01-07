@@ -6,7 +6,7 @@
 function getUrlParams(url, key) {
     if (typeof url !== 'string' || typeof key !== 'string') return
     const params = {}
-    if (url.split('?').length > 1) {
+    if (url.indexOf('?') !== -1) {
         url.split('?')[1].split('&').forEach(item => {
             let [key, value] = item.split('=')
             params[key] = value

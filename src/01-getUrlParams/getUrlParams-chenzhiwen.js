@@ -10,3 +10,5 @@ function getUrlParams(key) {
     return decodeURIComponent(r[2])
   }
 }
+
+export default getUrlParams

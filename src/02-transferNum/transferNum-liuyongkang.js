@@ -36,7 +36,7 @@ function transformNum1(num) {
 		return num;
 	}
 }
-// 测试案例:
+// 测试案例1:
 // 整数位小于3位数
 console.log(transformNum1('123.24')); // 123.24
 // 不带小数的
@@ -68,7 +68,7 @@ function transformNum2(num) {
 		return num;
 	}
 }
-// 测试案例
+// 测试案例2:
 // 整数位小于3位数
 console.log(transformNum2('123.24')); // 123.24
 // 不带小数的
@@ -87,7 +87,7 @@ function transformNum3(num) {
 	}
 	return num;
 }
-// 测试案例
+// 测试案例3:
 // 整数位小于3位数
 console.log(transformNum3('123.24')); // 123.24
 // 不带小数的

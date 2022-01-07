@@ -12,7 +12,7 @@ function getUrlParams(url, param) {
 
   for (const item of arr) {
     const name = item[0];
-    const value = item[1];
+    const value = Number(item[1]);
 
     args[name] = value;
   }

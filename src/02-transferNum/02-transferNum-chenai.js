@@ -40,5 +40,3 @@ function transferNum(num) {
     return newStr
 }
 export default transferNum
-let result = transferNum(123456123456)
-console.log(result)

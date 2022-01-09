@@ -22,7 +22,7 @@ function unique1(arr) {
 }
 console.log("方式1", unique1([1, 1, 2, 3]));    // 方式1 [ 1, 2, 3 ]
 
-// 方式2 map处理
+// 方式2 map处理 
 function unique2(arr) {
     // arr = arr.reverse();
     let len = arr.length,
@@ -36,7 +36,6 @@ function unique2(arr) {
     return [...map.keys()].reverse();
 }
 console.log("方式2", unique2([1, 1, 2, 3]));    // 方式2 [ 1, 2, 3 ]
-
 
 // 方式3  数组的 forEach + indexOf/includes/some实现
 function unique3(arr) {

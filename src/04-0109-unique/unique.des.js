@@ -7,4 +7,6 @@
  * output: [1, 2, 3]
  */
 
-function unique(arr) {}
+function unique(arr) {
+     
+}

@@ -17,4 +17,4 @@ var debounce = function(func, wait, immediate) {
 		timeout = setTimeout(later, wait);
 		if (callNow) func.apply(this, args);
 	}
-}；
+};

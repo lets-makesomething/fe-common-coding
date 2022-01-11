@@ -21,3 +21,19 @@
   }
   console.log(add(1, 2).toString());
   console.log(add(1)(2).toString());
+
+  const curry = (fn) => {
+    return function curried(...args) {
+      console.log(args, fn.length, "aa");
+      if (args.length >= fn.length) {
+        return fn(...args);
+      } else {
+        return function () {
+          return curried(...[...args, ...arguments]);
+        };
+      }
+    };
+  };
+  const add1 = curry((a, b) => a + b);
+  // console.log(add1(1,2,3))
+  console.log(add1(1)(2)); // 3

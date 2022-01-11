@@ -2,7 +2,7 @@
  * @description 函数防抖
  */
 
-// 第一种 非立即执行
+// 第一种 非立即执行 
 // function debounce(func, time) {
 //     let timer = null
 //     return function () {

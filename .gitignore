@@ -108,3 +108,8 @@ dist
 backup/
 
 package-lock.json
+
+src/12-0114/
+src/12-0115/
+src/12-0116/
+src/12-0117/

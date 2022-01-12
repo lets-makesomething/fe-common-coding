@@ -1,6 +1,7 @@
 #! /bin/bash
 
 file=.gitignore
+# git rm -r --cached .
 
 sed '112d' $file > $file.tmp
 mv $file.tmp $file

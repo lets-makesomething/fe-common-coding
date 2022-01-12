@@ -1,7 +1,6 @@
 /**
  *
- * @param {*} data
- * @description 深拷贝实现
+ * @description 写一个方法，这个方法要生成并返回一个随机颜色。
  */
 
-function deepClone(data) {}
+function randomColor() {}

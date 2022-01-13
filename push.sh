@@ -2,7 +2,7 @@
 
 file=.gitignore
 time=$(date "+%Y-%m-%d %H:%M:%S")
-# git rm -r --cached .
+git rm -r --cached .
 
 sed '112d' $file > $file.tmp
 mv $file.tmp $file

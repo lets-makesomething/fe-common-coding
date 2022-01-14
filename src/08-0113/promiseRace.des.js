@@ -5,6 +5,7 @@
  * @example
  * input: Array<Promise>
  * output: Promise
+ *
  */
 
 function promiseRace(promises) {}

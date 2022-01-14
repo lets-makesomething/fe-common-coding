@@ -1,5 +1,4 @@
 /**
- *
  * @param {*} promises
  * @description 实现Promise.all方法
  * @example

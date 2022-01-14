@@ -5,3 +5,5 @@
  * input: Array<Promise>
  * output: Promise
  */
+
+function promiseAll(promises) {}

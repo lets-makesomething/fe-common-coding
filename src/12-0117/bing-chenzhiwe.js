@@ -1,0 +1,6 @@
+/**
+ * myBind
+ */
+function myBind() {
+
+}

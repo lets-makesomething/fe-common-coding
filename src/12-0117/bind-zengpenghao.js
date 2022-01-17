@@ -2,7 +2,7 @@
  * @description 手动实现bind方法.
  */
 
- function bind2(context) {
+function bind2(context) {
   if (typeof this !== "function") {
     throw new Error("Function.prototype.bind - what is trying to be bound is not callable");
   }
@@ -18,4 +18,4 @@
   F.prototype = self.prototype;
   bound.prototype = new F();
   return bound;
- }
+}

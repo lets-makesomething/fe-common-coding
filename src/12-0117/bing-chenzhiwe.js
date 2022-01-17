@@ -1,6 +1,0 @@
-/**
- * myBind
- */
-function myBind() {
-
-}

@@ -21,7 +21,3 @@ function transferWords(s) {
   });  
 }  
 console.log(transferWords('hello everyone, this is our first question topic.'));  
-
-
-
-// console.log(transferWords('hello everyone, this is our first question topic.'))

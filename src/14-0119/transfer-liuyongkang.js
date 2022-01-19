@@ -20,9 +20,9 @@ function transferWords1(str) {
 
 // 测试案例1
 const str1 = 'hello everyOneDay, this is our first question topic.';
-console.log(transferWords1(str1)); // Hello EveryOneDay, This Is Our First Question Topic.
+console.log('方式1', transferWords1(str1)); // Hello EveryOneDay, This Is Our First Question Topic.
 
-// 方法2：正则
+// 方式2：正则
 /**
  * 将英文中每个单词的首字母都变成大写。
  * @param {*} str   字符串
@@ -35,4 +35,4 @@ function transferWords2(str) {
 }
 // 测试案例2
 const str2 = 'hello everyOneDay, this is our first question topic.';
-console.log(transferWords2(str2)); // Hello EveryOneDay, This Is Our First Question Topic.
+console.log('方式2', transferWords2(str2)); // Hello EveryOneDay, This Is Our First Question Topic.

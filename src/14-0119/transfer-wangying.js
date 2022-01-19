@@ -15,7 +15,7 @@ function transferWords(s){
 
 // 方法二：正则
 function transferWords(s) {  
-  return s.toLowerCase().replace(/\b([\w|']+)\b/g, function(word) {  
+  return s.replace(/\b([\w]+)\b/g, function(word) {  
       // return word[0].toUpperCase() + word.slice(1);  
       return word.replace(word.charAt(0), word.charAt(0).toUpperCase());  
   });  

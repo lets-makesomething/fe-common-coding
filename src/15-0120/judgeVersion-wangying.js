@@ -10,7 +10,7 @@
  */
 
 const shouldUpdate = (oldVersion, newVersion) => {
-  return [newVersion,oldVersion].sort()[0] !== newVersion
+  return newVersion > oldVersion
 }
 
 console.log(shouldUpdate('1.2.3','1.2.3'))

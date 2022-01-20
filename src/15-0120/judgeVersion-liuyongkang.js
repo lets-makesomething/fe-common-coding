@@ -36,7 +36,7 @@ console.log('方式1', shouldUpdate1('1.0.1', '1.0.2')); // true
 console.log('方式1', shouldUpdate1('1.1.1', '1.0.2')); // false
 console.log('方式1', shouldUpdate1('1.1.1', '2.0.0')); // true
 
-// 方式：数组的sort方法
+// 方式2：数组的sort方法
 /**
  * 比较两个版本号的大小
  * @param {*} oldVersion

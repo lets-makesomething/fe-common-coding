@@ -53,7 +53,10 @@ const shouldUpdate = (oldVersion, newVersion) => {
       return true
     } else if (newArr[i] === oldArr[i]) {
       // do nothing
-      // 什么也不做，进入下一轮循环，比较下一位版本号
+      // 什么也不做，进入下一轮循环，比较下一位版本号，直到最末位
+      if (i == 2) {
+        return false
+      }
     } else {
       return false
     }

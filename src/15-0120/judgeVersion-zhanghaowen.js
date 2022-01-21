@@ -10,20 +10,20 @@
  */
 
 const shouldUpdate = (oldVersion, newVersion) => {
-  if (oldVersion === newVersion) {
-    return false;
+  if(oldVersion===newVersion){
+      return false
   }
-  const oldArr = oldVersion.split(".").map((i) => Number(i));
-  const newArr = newVersion.split(".").map((i) => Number(i));
-  console.log(oldArr, newArr, "ss");
-  for (let i = 0; i < oldArr.length; i++) {
-    console.log(oldArr[i], newArr[i]);
-    if (oldArr[i] < newArr[i]) {
-      return true;
-    } else if (oldArr[i] === newArr[i]) {
-      i++;
-    } else {
-      return false;
+  const oldArr = oldVersion.split('.').map(i=>Number(i))
+  const newArr = newVersion.split('.').map(i=>Number(i))
+  console.log(oldArr,newArr,'ss')
+  let i =0 ;
+  while(i<oldArr.length){
+    if(oldArr[i]<newArr[i]){
+      return true
+    }else if(oldArr[i]===newArr[i]){
+      i++
+    }else{
+      return false
     }
   }
-};
+}

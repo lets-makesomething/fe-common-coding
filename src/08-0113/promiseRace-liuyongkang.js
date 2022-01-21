@@ -19,7 +19,7 @@ function promiseRace(promises) {
 	// 1. 不是数组直接抛出错误
 	if (!Array.isArray(promises))
 		throw new TypeError(
-			`${typeof promises} 241242 is not iterable (cannot read property Symbol(Symbol.iterator))`
+			`${typeof promises} is not iterable (cannot read property Symbol(Symbol.iterator))`
 		);
 
 	// 2. 是数组才执行遍历promise操作

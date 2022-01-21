@@ -7,4 +7,15 @@
  */
 const flatten = arr => {
   // 补全代码
+  let result = []
+  for (let i = 0; i < arr.length; i++) {
+    if (typeof arr[i] === 'number') {
+      result.push(arr[i])
+    } else {
+      let _result = flatten(arr[i])
+      console.log(_result)
+      result.push(..._result)
+    }
+  }
+  return result
 }

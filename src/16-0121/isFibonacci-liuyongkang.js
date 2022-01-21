@@ -47,6 +47,7 @@ const _isFibonacci1 = (array) => {
 	return flag;
 };
 
+// 测试案例
 console.log('方式1', _isFibonacci1([0, 1])); // false
 console.log('方式1', _isFibonacci1([0, 1, 1])); // true
 console.log('方式1', _isFibonacci1([0, 1, 1, 3])); // false
@@ -77,10 +78,12 @@ const _isFibonacci2 = (array) => {
 		return fibonacci(n - 1) + fibonacci(n - 2);
 	}
 
-	// 3.2 遍历数组，判断每项和生成斐波那契数列函数返回的值判断是否相等，只有全部相等才是一个斐波那契数列数组
-	return array.every((item, index) => item === fibonacci(index));
+	// 3.2 遍历数组，判断每项和生成斐波那契数列函数返回的值判断是否相等
+	// 只要一个不满足斐波那契数列就返回false，否则返回true
+	return !array.some((item, index) => item !== fibonacci(index));
 };
 
+// 测试案例
 console.log('方式2', _isFibonacci2([0, 1])); // false
 console.log('方式2', _isFibonacci2([0, 1, 1])); // true
 console.log('方式2', _isFibonacci2([0, 1, 1, 3])); // false

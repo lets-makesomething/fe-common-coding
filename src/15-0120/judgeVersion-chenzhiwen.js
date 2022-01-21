@@ -9,8 +9,8 @@
  */
 const shouldUpdate = (oldVersion, newVersion) => {
   // 方法一：笨办法一位一位比较
-  // let oldArr = oldVersion.split('.') // => [a, b, c]
-  // let newArr = newVersion.split('.') // => [A, B, C]
+  // let oldArr = oldVersion.split('.').map(str => Number(str)) // => [a, b, c] 字符串数组转为数字数组
+  // let newArr = newVersion.split('.').map(str => Number(str)) // => [A, B, C] 字符串数组转为数字数组
   // let index = 0
   // // 逐步比较上述两个数组对应索引元素的大小
   // if (newArr[0] > oldArr[0]) { // A > a

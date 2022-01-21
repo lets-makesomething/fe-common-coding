@@ -7,15 +7,20 @@
  */
 const flatten = arr => {
   // 补全代码
+  // 类型守卫
+  if (!Array.isArray(arr)) {
+    throw new TypeError('arr must be array')
+  }
   let result = []
   for (let i = 0; i < arr.length; i++) {
     if (typeof arr[i] === 'number') {
       result.push(arr[i])
     } else {
       let _result = flatten(arr[i])
-      console.log(_result)
       result.push(..._result)
     }
   }
   return result
 }
+
+export default flatten

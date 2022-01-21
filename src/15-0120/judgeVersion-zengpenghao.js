@@ -15,5 +15,10 @@ const shouldUpdate = (oldVersion, newVersion) => {
   if (typeof oldVersion !== "string" || typeof newVersion !== "string") {
     throw new Error("version must be a string");
   }
-  return newVersion > oldVersion;
+  
+  const getNum = (s) => return s.split('.').join('');
+  return getNum(newVersion) > getNum(oldVersion);
+
+  // 需要严格按照约定格式输入
+  // return newVersion > oldVersion;
 }

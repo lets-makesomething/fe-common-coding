@@ -7,6 +7,9 @@
  */
 const _isFibonacci = array => {
   // 补全代码
+  if (!Array.isArray(array) || array.length < 3) {
+    return false
+  }
   const fibFn = (n) => {
     if (n == 0) {
       return 0
@@ -18,3 +21,11 @@ const _isFibonacci = array => {
   }
   return !array.some((item, index) => item !== fibFn(index))
 }
+
+/**
+ * 测试用例
+ * [0, 1] => false
+ * [0, 1, 1] => true
+ * [0, 1, 2] => false
+ * [0, 1, 1, 2] => true
+ */

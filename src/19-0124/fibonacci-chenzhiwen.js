@@ -12,6 +12,12 @@ function fibonacci(n) {
   if (Number.isNaN(n)) {
     throw new Error("n can't be NaN")
   }
+  if (n < 0) {
+    throw new Error("n can't less than 0")
+  }
+  if (!Number.isInteger(n)) {
+    throw new Error("n must be integer")
+  }
   if (n === 0) {
     return 0
   }
@@ -20,3 +26,5 @@ function fibonacci(n) {
   }
   return fibonacci(n - 2) + fibonacci(n - 1)
 }
+
+export default fibonacci

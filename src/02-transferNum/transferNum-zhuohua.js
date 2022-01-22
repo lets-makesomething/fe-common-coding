@@ -5,10 +5,10 @@
  */
 
 function transferNum(num) {
-  return num && num.toString()
+  return Number(num && num.toString()
       .replace(/\d+/, function(s){
             return s.replace(/(\d)(?=(\d{3})+$)/g, '$1,')
-        })
+        }))
 }
 
 transferNum(123456)

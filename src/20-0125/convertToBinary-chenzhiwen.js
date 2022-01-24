@@ -4,6 +4,7 @@
  * @returns {string} str 转换后的二进制字符串
  * @description 如果字符串长度不足 8 位，则在前面补 0 到满8位
  * @description 输入 65 输出 01000001
+ * @description https://zhuanlan.zhihu.com/p/362562301
  */
 function convertToBinary(num) {
   if (num > 127 || num < -128) {
@@ -38,3 +39,5 @@ function convertToBinary(num) {
   }
   return result
 }
+
+export default convertToBinary

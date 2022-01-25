@@ -11,8 +11,8 @@
 
 // 第一种解法：利用number.toString(radix),其中radix表示转换为多少进制
 function convertToBinary(num) {
-  if (num < 0) {
-    return "不能为负数";
+  if (num < 0||num>255) {
+    return "输入的数字只能在0-255之间";
   }
   let str = num.toString(2);
   let string = "";

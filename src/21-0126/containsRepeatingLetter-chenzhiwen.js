@@ -18,3 +18,5 @@ function containsRepeatingLetter(str) {
     return index === arr.length - 1 ? false : item === arr[index + 1]
   })
 }
+
+export default containsRepeatingLetter

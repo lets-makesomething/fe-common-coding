@@ -8,17 +8,24 @@ const isPrime = num => {
   }
 
   const absNum= Math.abs(num)
-  if(Number.isNaN(num) && !Number.isInteger(num) && absNum <= 3){
+  if(Number.isNaN(num) || !Number.isInteger(num) || absNum === 1){
     return false
   }
 
+   if(num == 2){
+    return true; 
+   }else if(num % 2 === 0){
+      // 偶数可以直接非质数
+    return false
+   }
+
   const n =Math.sqrt(absNum) 
-  for(let i = 2; i < n; i++) {
+  for(let i = 3; i < n; i+=2) {
     if(num % i === 0){
-      return true
+      return false
     }
   }
-  return false
+  return true
 }
 
-console.log(isPrime(13))
+console.log(isPrime(1))

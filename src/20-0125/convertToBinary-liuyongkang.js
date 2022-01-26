@@ -22,17 +22,24 @@ function convertToBinary(num) {
 		throw new Error('Parameter must be a valid number');
 
 	// 2. 转换成数字
-	num = Number(num);
+	let newNum = Number(Math.abs(num));
 
 	// 3. 10进制转2进制
-	num = num.toString(2);
+	newNum = newNum.toString(2);
 
 	// 4. 长度不满足 8 位在前面补 0
-	return num.padStart(8, 0);
+	newNum = newNum.padStart(8, 0);
+
+	// 5. 返回二进制数
+	return `${num > 0 ? '' : '-'}${newNum}`;
 }
 
 // 测试案例
-console.log(convertToBinary(8)); // 00001000
-console.log(convertToBinary(65)); // 01000001
+console.log(convertToBinary(12)); // 00001100
+console.log(convertToBinary(-12)); // -00001100
 // console.log(convertToBinary('65')); // 报错
 // console.log(convertToBinary('65xx')); // 报错
+
+// 验证二进制字符串转成10进制的数
+console.log(parseInt(convertToBinary(12), 2)); // 12
+console.log(parseInt(convertToBinary(-12), 2)); // -12

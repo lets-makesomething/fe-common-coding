@@ -19,4 +19,9 @@ describe("测试检测是否存在连续重复字符", () => {
   test("测试函数能否检测没有连续重复的字符串", () => {
     expect(containsRepeatingLetter('abcdefghijklmn')).toBe(false)
   })
+
+  test("测试函数能够检测大小写", () => {
+    expect(containsRepeatingLetter('abcDdefg')).toBe(false)
+    expect(containsRepeatingLetter('-)?Hh]')).toBe(false)
+  })
 })

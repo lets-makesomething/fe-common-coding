@@ -23,3 +23,5 @@ function multiply(a, b) {
   let bRate = getRate(b)
   return a * aRate * b * bRate / (aRate * bRate)
 }
+
+export default multiply

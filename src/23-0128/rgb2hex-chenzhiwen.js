@@ -24,3 +24,79 @@ function rgb2hex(sRGB) {
 }
 
 export default rgb2hex
+
+/**
+ * 拓展
+ * https://developer.mozilla.org/zh-CN/docs/Web/CSS/color_value
+ * rgb 的多种语法
+ * 不包含透明度时：
+ * rgb(255,0,153) 不带空格
+ * rgb(255, 0, 153) 带空格
+ * rgb(255, 0, 153.0) 浮点数
+ * rgb(100%,0%,60%) 三个百分比，切记，不能数字和百分比混用
+ * rgb(100%, 0%, 60%) 三个百分比带空格
+ * rgb(255 0 153) 空格替代逗号分隔
+ * rgb(255 0 153.4) 空格分隔带浮点数
+ * rgb(10% 30% 34%) rgb(10% 30% 34.5%) 空格分隔带百分比
+ * 经测试，上述语法都可以正确表示不带透明度的 rgb 颜色
+ * 但符合最开始要求的应该只有 前三个
+ */
+
+/**
+ * 将多种语法的不带透明度的 rgb 颜色字符转换为十六进制的形式
+ * @param {string} sRGB 
+ * @returns {string}
+ */
+function rgbs2hex (sRGB) {
+  if (typeof sRGB !== 'string') {
+    throw new TypeError('sRGB must be string')
+  }
+  let colorStr = sRGB.slice(4, sRGB.length - 1)
+  // 不使用正则判断，而是检测输入字符串去除前面的 'rgb(' 和 末尾的 ')' 之后
+  // 剩下的部分是否符合要求：
+  /**
+   * 255,0,153
+   * 255,   0, 153
+   * 255, 0, 153.0
+   * 9,   10   ,      255
+   * '  9,   10   ,      255  '
+   * 100%,0%,60%
+   * 100% 0% 60%
+   * '  100%   0%      60%  '
+   * 255 0 153
+   * '  255    0      153  '
+   * '  255    0      153.3'
+   */
+  // 分隔：空格和逗号不能混用
+  // 数值：自然数小数不能与百分比混用
+  function _trans(colorArr) {
+    try {
+      if (colorArr.length !== 3) {
+        return sRGB
+      }
+      let hexStr
+      if (colorArr.every(str => str.includes('%'))) { // 要么都是百分比
+        hexStr = colorArr.map(numStr => `0${(Math.floor(numStr.replace('%', '') / 100 * 255)).toString(16)}`.slice(-2)).join('')
+        return `#${hexStr}`
+      } else if (colorArr.every(str => !str.includes('%'))) { // 要么都不是百分比
+        hexStr = colorArr.map(numStr => `0${parseInt(numStr).toString(16)}`.slice(-2)).join('')
+        return `#${hexStr}`
+      } else {
+        // 说明有数字和百分比混用
+        return sRGB
+      }
+    } catch (e) {
+      return sRGB
+    }
+  }
+
+  if (colorStr.includes(',')) { // 逗号分隔
+    let colorArr = colorStr.split(',')
+    return _trans(colorArr)
+  } else { // 空格分隔
+    let colorArr = colorStr.split(/(\S*)/).filter(str => str !== '' && str !== ' ')
+    return _trans(colorArr)
+  }
+}
+
+export { rgbs2hex }

@@ -17,9 +17,13 @@
 
 // 实现方式
 function convertToBinary(num) {
-	// 1. 必须是一个数字，并且不是NaN
-	if (typeof num !== 'number' || isNaN(num))
+	// 1. num必须是一个整数
+	if (Number.isInteger(num))
 		throw new Error('Parameter must be a valid number');
+
+	// 不考虑负数的情况下，8位二进制数能表示的整数的范围是 [0, 255]
+	// 考虑负数的情况下，8位二进制数能表示的整数的范围是 [-128, 127]
+	if (num < -128 || num > 127) throw new Error('超出范围');
 
 	// 2. 转换成数字
 	let newNum = Number(Math.abs(num));

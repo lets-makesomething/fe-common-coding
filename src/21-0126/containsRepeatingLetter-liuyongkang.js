@@ -25,7 +25,7 @@ console.log('方式1', containsRepeatingLetter1('abba')); // true
 console.log('方式1', containsRepeatingLetter1('aefc')); // false
 console.log('方式1', containsRepeatingLetter1('rattler')); // true
 console.log('方式1', containsRepeatingLetter1('AfweAA')); // true
-console.log('方式1', containsRepeatingLetter1('AfweAa')); // true
+console.log('方式1', containsRepeatingLetter1('AfweAa')); // false
 console.log('------------------');
 
 // 实现方式2: 正则实现
@@ -44,4 +44,4 @@ console.log('方式2', containsRepeatingLetter2('abba')); // true
 console.log('方式2', containsRepeatingLetter2('aefc')); // false
 console.log('方式2', containsRepeatingLetter2('rattler')); // true
 console.log('方式2', containsRepeatingLetter2('AfweAA')); // true
-console.log('方式2', containsRepeatingLetter2('AfweAa')); // true
+console.log('方式2', containsRepeatingLetter2('AfweAa')); // false

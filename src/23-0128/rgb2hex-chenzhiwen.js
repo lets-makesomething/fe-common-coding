@@ -22,3 +22,5 @@ function rgb2hex(sRGB) {
   let hexStr = sRGB.slice(4, sRGB.length -1).split(',').map(numStr => `0${Number(numStr.trim()).toString(16)}`.slice(-2)).join('')
   return `#${hexStr}`
 }
+
+export default rgb2hex

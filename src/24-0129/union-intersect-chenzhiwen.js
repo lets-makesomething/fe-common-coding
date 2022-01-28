@@ -24,3 +24,5 @@ const intersect = (a, b) => {
   }
   return a.filter(n => b.includes(n))
 }
+
+export { union, intersect }

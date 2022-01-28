@@ -9,7 +9,7 @@ const union = (a, b) => {
   if (!Array.isArray(a) || !Array.isArray(b)) {
     throw new Error('input must be array')
   }
-  return a.concat(b)
+  return [...new Set(a.concat(b))]
 }
 
 /**

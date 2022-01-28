@@ -15,7 +15,7 @@ function containsRepeatingLetter(str) {
     throw new TypeError('请输入字符串')
   }
   return str.split('').some((item, index, arr) => {
-    return index === arr.length - 1 ? false : item === arr[index + 1]
+    return index === arr.length - 1 ? false : /[a-zA-Z]/.test(item) && item === arr[index + 1]
   })
 }
 

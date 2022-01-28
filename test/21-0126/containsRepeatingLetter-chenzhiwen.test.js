@@ -24,10 +24,4 @@ describe("测试检测是否存在连续重复字符", () => {
     expect(containsRepeatingLetter("abcDdefg")).toBe(false);
     expect(containsRepeatingLetter("-)?Hh]")).toBe(false);
   });
-
-  test("测试函数能够检测重复的特殊字符", () => {
-    expect(containsRepeatingLetter("[[cdef-+")).toBe(true);
-    expect(containsRepeatingLetter("+ijh++iu[/")).toBe(true);
-    expect(containsRepeatingLetter("//2123")).toBe(true);
-  });
 });

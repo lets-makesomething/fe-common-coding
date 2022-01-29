@@ -15,3 +15,5 @@ const onceUnit = arr => {
     return !_arr.includes(item)
   })[0]
 }
+
+export default onceUnit

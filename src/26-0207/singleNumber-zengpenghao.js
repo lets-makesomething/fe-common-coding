@@ -19,8 +19,8 @@
  */
 
 var singleNumber = function(nums) {
-  // 1 ^ 1 === 0
-  // 1 ^ 0 === 1
+  // 1 ^ 1 => 0
+  // 1 ^ 0 => 1
   // 4 ^ 1 ^ 2 ^ 1 ^ 2 => 1 ^ 1 ^ 2 ^ 2 ^ 4 => 0 ^ 2 ^ 2 ^ 4 => 2 ^ 2 ^ 4 => 0 ^ 4 => 4
-  return nums.reduce((pre, cur) => pre ^= cur);
+  return nums.reduce((pre, cur) => pre ^ cur);
 };

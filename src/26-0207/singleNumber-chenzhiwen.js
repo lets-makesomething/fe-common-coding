@@ -20,3 +20,5 @@ var singleNumber = function(nums) {
   }
   return result
 }
+
+export default singleNumber

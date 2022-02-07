@@ -7,5 +7,16 @@
  * @description 输入 [4,1,2,1,2] 输出 4
  */
 var singleNumber = function(nums) {
-
-};
+  if (!Array.isArray(nums)) {
+    throw new TypeError('请输入数组')
+  }
+  let length = nums.length
+  if (length === 1) {
+    return nums[0]
+  }
+  let result = 0
+  for (let i = 0; i < length; i++) {
+    result ^= nums[i]
+  }
+  return result
+}

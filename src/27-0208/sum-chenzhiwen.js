@@ -16,3 +16,5 @@ var sum = function(a, b) {
   }
   return result.replace(/^0+/, '') || 0
 }
+
+export default sum

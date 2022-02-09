@@ -44,3 +44,5 @@ var twoSum = function(nums, target) {
       }
    }
 }
+
+export default twoSum

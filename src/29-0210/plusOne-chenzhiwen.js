@@ -43,6 +43,9 @@ var plusOne = function(digits) {
   for (let i = 0; i < len; i++) {
     if (temp[i] === 9) {
       temp[i] = 0
+      if (i === len - 1 && i !== 99) {
+        temp.push(1)
+      }
     } else {
       temp[i] += 1
       break
@@ -50,3 +53,5 @@ var plusOne = function(digits) {
   }
   return temp.reverse()
 }
+
+export default plusOne

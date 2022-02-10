@@ -4,7 +4,9 @@
  * @return string 123,456
  */
 //以3为标识，
-function transferNum (num) { 
+function transferNum (num) {
   if (!num) return
   return (num).toString().replace(/3/g, ($0) => $0 + ',') //RegExp替换
 }
+
+console.log(transferNum(123456))

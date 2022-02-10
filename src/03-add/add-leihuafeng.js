@@ -8,3 +8,5 @@ function add (a) {
   let args = [...arguments]  // 等价Array.from(arguments)，记录外层函数的参数
   return (b) => args[0] + b
 }
+
+console.log(add(1)(2))

@@ -46,3 +46,5 @@ var missingNumber = function(nums) {
   }
   return result
 }
+
+export default missingNumber

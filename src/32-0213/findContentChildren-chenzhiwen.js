@@ -34,5 +34,18 @@
  * @return {number} 胃口能够被满足的孩子个数的最大值
  */
 var findContentChildren = function(g, s) {
-
+   // 饼干不是关键，人数是关键
+   // 小孩按胃口从小到大排序
+   g.sort((a, b) => a - b)
+   // 饼干按尺寸从小到大排序
+   s.sort((a, b) => a - b)
+   let len = g.length // 起始人数
+   let i = 0
+   while (g.length !== 0 && i <= s.length) {
+      if (g[0] <= s[i]) {
+         g.shift()
+      }
+      i++
+   }
+   return len - g.length
 }

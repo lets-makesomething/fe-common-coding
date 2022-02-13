@@ -49,3 +49,5 @@ var findContentChildren = function(g, s) {
    }
    return len - g.length
 }
+
+export default findContentChildren

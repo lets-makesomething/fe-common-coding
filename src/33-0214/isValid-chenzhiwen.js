@@ -73,3 +73,5 @@ var isValid = function(s) {
   }
   return true
 }
+
+export default isValid

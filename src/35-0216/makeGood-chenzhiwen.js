@@ -54,3 +54,5 @@ var makeGood = function (s) {
   }
   return s
 }
+
+export default makeGood

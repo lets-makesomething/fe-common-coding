@@ -36,3 +36,5 @@ var removeDuplicates = function(s) {
   }
   return s
 }
+
+export default removeDuplicates

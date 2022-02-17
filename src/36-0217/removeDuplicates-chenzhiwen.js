@@ -23,10 +23,16 @@
  * @param {string} s
  * @return {string}
  */
-var removeDuplicates = function(s) {
-  if (s.length <= 1) return s
+ var removeDuplicates = function(s) {
+  if (typeof s !== 'string') throw new TypeError('s must be a string')
+  if (s.length === 0 || s.length > 20000) throw new Error('invalid input')
+  if (s.length === 1) return s
   let i = 0
+  let reg = /^[a-z]+$/i
   while (i < s.length - 2 && s.length !== 0) {
+    if (!reg.test(s[i]) || !reg.test(s[i + 1])) {
+      throw new Error('字符串只能由小写英文字母组成')
+    }
     if (s[i] === s[i + 1]) {
       s = s.slice(0, i) + s.slice(i + 2)
       if ( i > 0) i--

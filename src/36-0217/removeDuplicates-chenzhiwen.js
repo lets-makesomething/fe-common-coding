@@ -19,9 +19,9 @@
     S 仅由小写英文字母组成。
  */
 
-/**
- * @param {string} s
- * @return {string}
+/** 移除输入字符中相邻重复的两个字符
+ * @param {string} s 待操作的字符串
+ * @return {string} 返回操作后的字符串
  */
  var removeDuplicates = function(s) {
   if (typeof s !== 'string') throw new TypeError('s must be a string')

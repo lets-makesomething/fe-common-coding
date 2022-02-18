@@ -31,14 +31,15 @@
  * @param {string} t 待比较的字符串
  * @return {boolean}
  */
-var backspaceCompare = function(s, t) {
+var backspaceCompare = function (s, t) {
   // 边界检测
-  if (!(1 <= s.length && s.length <= 200 && 1 <= t.length && t.length <= 200)) throw new Error('输入的字符串长度不符合要求')
+  if (!(1 <= s.length && s.length <= 200 && 1 <= t.length && t.length <= 200))
+    throw new Error('输入的字符串长度不符合要求')
   // 字符类型判断放在遍历中进行
   let stackS = []
   let stackT = []
   for (let i = 0; i < s.length; i++) {
-    if (!(/[a-z]/.test(s[i])) && !(/#/.test(s[i]))) {
+    if (!/[a-z]/.test(s[i]) && !/#/.test(s[i])) {
       throw new Error('输入的字符串不符合要求')
     }
     if (s[i] === '#') {
@@ -50,7 +51,7 @@ var backspaceCompare = function(s, t) {
     }
   }
   for (let i = 0; i < t.length; i++) {
-    if (!(/[a-z]/.test(t[i])) && !(/#/.test(t[i]))) {
+    if (!/[a-z]/.test(t[i]) && !/#/.test(t[i])) {
       throw new Error('输入的字符串不符合要求')
     }
     if (t[i] === '#') {
@@ -63,3 +64,5 @@ var backspaceCompare = function(s, t) {
   }
   return stackS.join('') === stackT.join('')
 }
+
+export default backspaceCompare

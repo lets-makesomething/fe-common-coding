@@ -8,7 +8,7 @@
  * 函数防抖：非立即执行版本
  * @param {*} fun       需要防抖的函数
  * @param {*} delay     延迟时间    默认延迟500ms
- * @returns             返回一个被防抖函数处理过的函数: 规定时间内执行一次
+ * @returns             返回一个被防抖函数处理过的函数
  */
 function debounce1(fun, delay = 500) {
 	// 1. 保存定时器标识 定义一个变量来保存定时器标识
@@ -41,7 +41,7 @@ function debounce1(fun, delay = 500) {
  * @param {*} fun       需要防抖的函数
  * @param {*} delay     延迟时间    默认延迟500ms
  * @param {*} immediate 是否立即执行    默认false,和非立即执行版本一样的功能    true: 第一次执行，后面如果点击的间隔在delay时间内不会执行，否则执行
- * @returns             返回一个被防抖函数处理过的函数: 规定时间内执行一次
+ * @returns             返回一个被防抖函数处理过的函数
  */
 function debounce2(fun, delay = 500, immediate = false) {
 	// 1. 保存定时器标识

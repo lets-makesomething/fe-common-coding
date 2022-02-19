@@ -46,8 +46,8 @@ RecentCounter.prototype.ping = function (t) {
   if (this.pingCount > 104) {
     throw new Error('不能再调用 ping 方法')
   }
-  if (this.count.length === 0 || t <= this.count[this.count.length - 1]) {
-    throw new Error('')
+  if (t <= this.count[this.count.length - 1]) {
+    throw new Error('必须保证每次对 ping 调用所使用的 t 值都严格递增')
   } else { // t 大于等于1 小于等于 109 的条件与给出的示例相违背
     this.pingCount++
     this.count.push(t)

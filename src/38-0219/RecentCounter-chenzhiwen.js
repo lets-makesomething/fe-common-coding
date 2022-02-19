@@ -51,3 +51,5 @@ RecentCounter.prototype.ping = function (t) {
     return this.count.slice(index).length
   }
 }
+
+export default RecentCounter

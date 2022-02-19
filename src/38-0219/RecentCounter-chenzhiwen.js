@@ -48,12 +48,16 @@ RecentCounter.prototype.ping = function (t) {
   }
   if (t <= this.count[this.count.length - 1]) {
     throw new Error('必须保证每次对 ping 调用所使用的 t 值都严格递增')
-  } else { // t 大于等于1 小于等于 109 的条件与给出的示例相违背
-    this.pingCount++
-    this.count.push(t)
-    let left = t - 3000
-    let index = this.count.findIndex(item => item >= left)
-    return this.count.slice(index).length
+  } else {
+    if (t >= 1 && t <= 109 && this.pingCount < 104) { // t 大于等于1 小于等于 109；ping 调用次数限制为 104 次
+      this.pingCount++
+      this.count.push(t)
+      let left = t - 3000
+      let index = this.count.findIndex(item => item >= left)
+      return this.count.slice(index).length
+    } else {
+      throw new Error('超出限制')
+    }
   }
 }
 

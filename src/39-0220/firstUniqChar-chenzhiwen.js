@@ -51,3 +51,5 @@ var firstUniqChar = function(s) {
   })
   return flag ? targetIndex : -1
 }
+
+export default firstUniqChar

@@ -7,7 +7,7 @@ describe('测试 39-firstUniqChar', () => {
   })
 
   test('参数长度检测', () => {
-    let str = 'm'.repeat(106)
+    let str = 'm'.repeat(10**5 + 1)
     expect(() => firstUniqChar(str)).toThrow()
   })
 

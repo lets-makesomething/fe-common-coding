@@ -20,7 +20,7 @@
 
   提示:
 
-  1 <= s.length <= 105
+  1 <= s.length <= 10**5
   s 只包含小写字母
  */
 
@@ -36,7 +36,7 @@ var firstUniqChar = function(s) {
   if (len === 1) {
     return 0
   }
-  if (len > 105) {
+  if (len > 10**5) {
     throw new Error('参数长度超过限制')
   }
   if (!/^[a-z]+$/g.test(s)) {

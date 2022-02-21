@@ -25,9 +25,9 @@
     
     提示：
 
-    1 <= t <= 109
+    1 <= t <= 10**9
     保证每次对 ping 调用所使用的 t 值都 严格递增
-    至多调用 ping 方法 104 次
+    至多调用 ping 方法 10**4 次
  */
 
 var RecentCounter = function () {
@@ -43,13 +43,13 @@ RecentCounter.prototype.ping = function (t) {
   if (!t || typeof t !== 'number') {
     return null
   }
-  if (this.pingCount > 104) {
+  if (this.pingCount > 10**4) {
     throw new Error('不能再调用 ping 方法')
   }
   if (t <= this.count[this.count.length - 1]) {
     throw new Error('必须保证每次对 ping 调用所使用的 t 值都严格递增')
   } else {
-    if (t >= 1 && t <= 109 && this.pingCount < 104) { // t 大于等于1 小于等于 109；ping 调用次数限制为 104 次
+    if (t >= 1 && t <= 10**9 && this.pingCount < 10**4) { // t 大于等于1 小于等于 10**9；ping 调用次数限制为 10**4 次
       this.pingCount++
       this.count.push(t)
       let left = t - 3000

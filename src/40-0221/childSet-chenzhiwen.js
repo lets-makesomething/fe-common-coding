@@ -13,3 +13,5 @@ function isChildSet(a, b) {
   }
   return a.every(item => b.includes(item))
 }
+
+export default isChildSet

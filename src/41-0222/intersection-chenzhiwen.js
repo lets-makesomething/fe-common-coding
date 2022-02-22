@@ -59,3 +59,5 @@ var intersection = function (nums1, nums2) {
   }
   return [...new Set(b.filter((item) => a.includes(item)))]
 }
+
+export default intersection

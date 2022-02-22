@@ -33,9 +33,7 @@
   const result = [];
 
   for (let i = 0, len = nums1.length; i < len; i++) {
-    if(map.get(nums1[i]) === undefined) {
-      map.set(nums1[i], i);
-    }
+    map.set(nums1[i], i);
   }
 
   for (let j = 0, len = nums2.length; j < len; j++) {

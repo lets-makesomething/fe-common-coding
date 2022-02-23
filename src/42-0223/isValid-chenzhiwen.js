@@ -45,9 +45,9 @@ var isValid = function (s) {
   const len = s.length
   if (len % 2 !== 0) return false
   const mapper = new Map([
-    ['(', ')'],
-    ['[', ']'],
-    ['{', '}'],
+    [')', '('],
+    [']', '['],
+    ['}', '{'],
   ])
   const stack = []
   for (let ch of s) {
@@ -55,6 +55,7 @@ var isValid = function (s) {
       if (!stack.length || stack[stack.length - 1] !== mapper.get(ch)) {
         return false
       }
+      stack.pop()
     } else {
       stack.push(ch)
     }

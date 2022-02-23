@@ -61,3 +61,5 @@ var isValid = function (s) {
   }
   return !stack.length
 }
+
+export default isValid

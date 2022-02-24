@@ -1,3 +1,8 @@
+/**
+ * @day 1
+ * input: https://baidu.com?a=1&b=2&c=3
+ * output: getUrlParams('a') => return 1
+ */
 // first way
 function getUrlParams (n, url) {
   let arr = url.split('?')[1].split('&')

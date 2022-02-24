@@ -46,3 +46,5 @@ var twoSum = function (nums, target) {
   }
   return []
 }
+
+export default twoSum

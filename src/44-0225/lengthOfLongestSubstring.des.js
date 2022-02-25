@@ -32,6 +32,36 @@ s 由英文字母、数字、符号和空格组成
  * @param {string} s
  * @return {number}
  */
- var lengthOfLongestSubstring = function(s) {
-  // need use map
+var lengthOfLongestSubstring = function (s) {
+	// need use map
+	const len = s.length;
+	if (len < 1) return len;
+
+	const map = new Map();
+	const result = [];
+
+	for (let i = 0; i < len; i++) {
+		// 出现重复的子串
+		if (map.get(s[i])) {
+			result.push(map.size);
+			// map.clear();     // 这个有问题，会清空所以数据
+			// 删除之前存在的子串数据
+			for (let key of map.keys()) {
+				map.delete(key);
+				if (!map.get(s[i])) break;
+			}
+		}
+		map.set(s[i], true);
+	}
+
+	if (map.size !== 0) result.push(map.size);
+
+	return Math.max.apply(null, result);
 };
+
+// 测试
+console.log(lengthOfLongestSubstring('bbtablud')); // 6
+console.log(lengthOfLongestSubstring('dvdf')); // 3
+console.log(lengthOfLongestSubstring('abcabcbb')); // 3
+console.log(lengthOfLongestSubstring('bbbbb')); // 1
+console.log(lengthOfLongestSubstring('pwwkew')); // 3

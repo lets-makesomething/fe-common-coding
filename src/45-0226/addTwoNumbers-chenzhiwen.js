@@ -57,7 +57,7 @@ var addTwoNumbers = function (l1, l2) {
       tail.next = new ListNode(sum % 10)
       tail = tail.next
     }
-    carray = Math.floor(sum / 10) // 进位
+    carry = Math.floor(sum / 10) // 进位
     if (l1) {
       l1 = l1.next
     }

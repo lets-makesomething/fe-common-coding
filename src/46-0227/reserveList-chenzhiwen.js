@@ -46,3 +46,5 @@ var reverseList = function (head) {
   head = prev
   return head
 }
+
+export default reverseList

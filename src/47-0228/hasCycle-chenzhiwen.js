@@ -54,3 +54,5 @@ var hasCycle = function (head) {
   }
   return false
 }
+
+export default hasCycle

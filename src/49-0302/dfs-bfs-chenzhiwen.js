@@ -55,9 +55,7 @@ let bfs = (root) => {
     let currentLength = queue.length
     result.push([])
     for (let i = 0; i < currentLength; i++) {
-      console.log('queue', queue)
       let node = queue.shift()
-      console.log('node', node)
       result[result.length - 1].push(node.val)
       if (node.children[0]) {
         queue.push(node.children[0])

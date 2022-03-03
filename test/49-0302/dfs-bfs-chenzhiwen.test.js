@@ -6,6 +6,6 @@ describe('test 49-dfs-bfs', () => {
   })
 
   it('测试广度优先遍历', () => {
-    expect(bfs(tree)).toEqual([1, 2, 3, 4, 5])
+    expect(bfs(tree)).toEqual([[1], [2, 3], [4, 5]])
   })
 })

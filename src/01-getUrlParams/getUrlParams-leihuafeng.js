@@ -1,6 +1,10 @@
+/**
+ * @day 1
+ * input: https://baidu.com?a=1&b=2&c=3
+ * output: getUrlParams('a') => return 1
+ */
 // first way
-function getUrlParams (n) {
-  let url = 'https://baidu.com?a=1&b=2&c=3'
+function getUrlParams (n, url) {
   let arr = url.split('?')[1].split('&')
   let obj = {}
   arr.forEach(item => {
@@ -9,10 +13,11 @@ function getUrlParams (n) {
   return obj[n]
 }
 // second way ：RegExp
-function getUrlParams (n) {
+function getUrlParams (n, url) {
   let obj = {}
-  let url = 'https://baidu.com?a=1&b=2&c=3'
   let reg = /([^?&+#]+)=([^?&+#]+)/g;
   url.replace(reg, ($0, $1, $2) => obj[$1] = $2)
   return obj[n]
 }
+
+console.log(getUrlParams(a, 'https://baidu.com?a=1&b=2&c=3'))

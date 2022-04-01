@@ -1,6 +1,7 @@
 /**
  * @description 深拷贝
- * @param val
+ * @param {Object} target 待拷贝对象
+ * @return {Object} 拷贝后的对象
  */
 
 function deepClone (target) {
